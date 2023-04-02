@@ -61,5 +61,21 @@
   "dependencies": {
     "@zxing/library": "^0.19.2",
     "react-webcam": "^7.0.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/codesaursx/react-scanner/issues"
+  },
+  "homepage": "https://github.com/codesaursx/react-scanner#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codesaursx/react-scanner.git"
+  },
+  "keywords": [
+    "package",
+    "react",
+    "scanner",
+    "qr",
+    "barcode",
+    "react-scanner"
+  ]
 }
