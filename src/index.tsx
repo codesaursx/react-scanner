@@ -1,5 +1,10 @@
 import React, { useCallback, useEffect, useRef } from 'react';
-import { BrowserMultiFormatReader, Result } from '@zxing/library';
+import {
+  BarcodeFormat,
+  BrowserMultiFormatReader,
+  DecodeHintType,
+  Result,
+} from '@zxing/library';
 import Webcam from 'react-webcam';
 
 type ScannerProps = {
@@ -26,7 +31,24 @@ export const Scanner = ({
   const webcamRef = useRef(null);
 
   const handleCapture = useCallback(() => {
-    const reader = new BrowserMultiFormatReader();
+    const hints = new Map();
+    const formats = [
+      BarcodeFormat.UPC_A,
+      BarcodeFormat.UPC_E,
+      BarcodeFormat.EAN_8,
+      BarcodeFormat.EAN_13,
+      BarcodeFormat.CODE_39,
+      BarcodeFormat.CODE_128,
+      BarcodeFormat.ITF,
+      BarcodeFormat.RSS_14,
+      BarcodeFormat.QR_CODE,
+      BarcodeFormat.DATA_MATRIX,
+      BarcodeFormat.AZTEC,
+      BarcodeFormat.PDF_417,
+    ];
+    hints.set(DecodeHintType.POSSIBLE_FORMATS, formats);
+
+    const reader = new BrowserMultiFormatReader(hints);
     // @ts-ignore
     const imageSrc = webcamRef?.current?.getScreenshot();
     if (imageSrc) {
