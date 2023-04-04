@@ -5,9 +5,9 @@ A React component to read QR and Barcodes in web-applications.
 ## Installation
 
 ```zsh
-npm install @CodesaursX/react-scanner --save
+npm install @codesaursx/react-scanner --save
 # or
-yarn add @CodesaursX/react-scanner
+yarn add @codesaursx/react-scanner
 ```
 
 ## Usage
