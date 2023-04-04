@@ -12,7 +12,7 @@ yarn add @CodesaursX/react-scanner
 
 ## Usage
 
-Go to your `tailwind.config.js` file and add the following.
+Once you install the package, you can import the component and use it as follow:
 
 ```ts
 import { useState } from 'react';
