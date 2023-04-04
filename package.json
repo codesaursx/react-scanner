@@ -59,6 +59,7 @@
     "typescript": "^5.0.3"
   },
   "dependencies": {
+    "@zxing/browser": "^0.1.1",
     "@zxing/library": "^0.19.2",
     "react-webcam": "^7.0.1"
   },
